@@ -1,1 +1,15 @@
-function initAnimations(){const items=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){items.forEach(e=>e.classList.add('is-visible'));return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12});items.forEach(e=>io.observe(e))}window.initAnimations=initAnimations;
+function initAnimations(){
+  const items=document.querySelectorAll('.reveal');
+  document.documentElement.classList.add('js-ready');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    items.forEach(item=>item.classList.add('is-visible'));
+    return;
+  }
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}
+    });
+  },{rootMargin:'0px 0px 80px 0px',threshold:0.01});
+  items.forEach(item=>observer.observe(item));
+}
+window.initAnimations=initAnimations;
