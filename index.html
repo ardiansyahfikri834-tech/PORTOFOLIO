@@ -27,6 +27,8 @@
   <script src="js/stage4.js" defer></script>
   <script src="js/stage5.js" defer></script>
   <script src="js/stage6.js" defer></script>
+  <script src="js/hero-video.js" defer></script>
+  <script src="js/music.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#home">Lewati navigasi</a>
@@ -52,14 +54,15 @@
 
   <main>
     <section class="hero" id="home" aria-label="Halaman pembuka portofolio">
-      <div class="hero__background" aria-hidden="true"></div><div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__background" aria-hidden="true"><video class="hero__video" id="hero-background-video" muted loop playsinline preload="metadata" poster="assets/images/Untitled%20Design%20(1).jpg"><source src="assets/videos/hero-background.mp4" type="video/mp4" /></video></div><div class="hero__shade" aria-hidden="true"></div>
       <div class="hero__content">
         <p class="eyebrow hero__eyebrow"><span class="hero-live-dot"></span> PERSONAL PORTFOLIO · 2026</p>
         <h1 class="hero__title"><span>WELCOME TO MY</span><span>PORTFOLIO</span></h1>
         <p class="hero__subline">FIKRI TRI ARDIANSYAH <span>—</span> DEVELOPER & CREATIVE EXPLORER</p>
         <a class="hero__scroll" href="#about"><span>SCROLL TO EXPLORE</span><i aria-hidden="true">↓</i></a>
+        <button class="hero-video-toggle" id="hero-video-toggle" type="button" aria-label="Jeda video latar" aria-controls="hero-background-video" title="Jeda video latar"><span class="hero-video-toggle__icon" aria-hidden="true">&#x23F8;</span></button>
       </div>
-      <div class="hero-stamp" aria-hidden="true"><span>THINK · BUILD · REPEAT ·</span><strong>FTA</strong></div>
+      <div class="hero-stamp" aria-hidden="true"><span></span><strong>FTA</strong></div>
       <div class="hero__bottom-gradient" aria-hidden="true"></div>
     </section>
 
@@ -252,6 +255,11 @@
     <div class="gallery-dialog__copy"><span class="dialog-kicker" id="gallery-dialog-kicker">VISUAL DIARY / 01</span><h2 id="gallery-dialog-title">Campus notes</h2><p id="gallery-dialog-description"></p><span class="gallery-dialog__note">NGAMPUS SAMPEK MBELDOS.</span></div>
   </dialog>
 
+  <audio id="background-music" src="assets/audio/portfolio-theme.mp3" preload="none" loop></audio>
+  <div class="music-control">
+    <button class="music-toggle" id="music-toggle" type="button" aria-label="Putar musik latar" title="Putar musik latar">♫</button>
+    <span class="music-status" id="music-status" role="status" aria-live="polite"></span>
+  </div>
   <button class="back-to-top" id="back-to-top" type="button" aria-label="Kembali ke atas">↑</button>
 </body>
 </html>
