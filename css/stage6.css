@@ -191,11 +191,14 @@
 .guestbook-form{margin:0}
 .guestbook-form .form-hint{min-height:1.5em}
 .guestbook-form button:disabled{opacity:.55;cursor:wait}
-.guestbook-list{display:grid;gap:4px;margin-top:18px}
+.guestbook-list{display:grid;max-height:min(380px,48vh);gap:4px;margin-top:18px;padding:8px 14px;overflow-y:auto;overscroll-behavior:contain;border:1px solid #ffffff12;border-radius:8px;background:#ffffff04;scrollbar-width:thin;scrollbar-color:#3f5e82 #101d2e}
+.guestbook-list::-webkit-scrollbar{width:7px}
+.guestbook-list::-webkit-scrollbar-track{border-radius:8px;background:#101d2e}
+.guestbook-list::-webkit-scrollbar-thumb{border:2px solid #101d2e;border-radius:8px;background:#3f5e82}
 .guestbook-list:empty::before{color:#7186a1;font-size:11px;content:'Belum ada komentar yang disetujui.'}
 .guestbook-card{padding:15px 2px;border-bottom:1px solid #ffffff1b}
 .guestbook-card__heading{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
 .guestbook-card__heading strong{font-size:12px}
 .guestbook-card time{flex:0 0 auto;color:#7186a1;font-family:var(--mono);font-size:8px}
 .guestbook-card p{margin:8px 0 0;color:#a7b3c5;font-size:12px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}
-@media(max-width:760px){.guestbook{grid-template-columns:1fr;gap:22px;margin-bottom:44px;padding-top:30px}}
+@media(max-width:760px){.guestbook{grid-template-columns:1fr;gap:22px;margin-bottom:44px;padding-top:30px}.guestbook-list{max-height:320px}}
