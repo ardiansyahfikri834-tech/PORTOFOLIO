@@ -1,6 +1,6 @@
 /* Stage 5 — personal publishing controls, typography, and accessibility polish. */
 :root{--stage5-focus:#8ab4ff;--stage5-glass:rgba(10,24,43,.82)}
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
 body{font-family:var(--body)}
 .hero__title,.section-heading-row h2,.about-heading h2,.contact-copy h2,.skills-intro h3,.gallery-note strong{font-family:var(--display)}
 .eyebrow,.section-kicker,.timeline-date,.meta-label,.project-type,.visual-label,.form-label,.site-footer,.dialog-kicker,.gallery-dialog__note{font-family:var(--mono)}
@@ -35,14 +35,16 @@ body{font-family:var(--body)}
   .button-ghost,.copy-email-button,.dialog-action{transition:none}
 }
 
-/* Stage 5.1 — make incomplete actions understandable instead of silently inert. */
-.action-feedback,.contact-setup-status{min-height:1.4em;margin:10px 0 0;color:#90a8c8;font-size:9px;line-height:1.6}
-.project-card--interactive{cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s}
-.project-card--interactive:hover{transform:translateY(-5px);border-color:#8eaee0;box-shadow:0 18px 42px #18375c18}
-.project-card--interactive:focus-visible{outline:3px solid #3475ff;outline-offset:5px}
-.project-detail-trigger{display:grid;flex:0 0 36px;width:36px;height:36px;place-items:center;border:1px solid #dce3ed;border-radius:50%;color:#2864ee;background:white;font-size:18px}
-.dialog-action--unavailable{color:#a7b5c8;border-style:dashed;background:#ffffff06;cursor:default}
-.social-links a.is-unconfigured{opacity:.62;cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px}
-.social-links a.is-unconfigured:hover{opacity:1;color:#fff}
-.social-links a[aria-disabled="true"]{pointer-events:auto}
-@media(max-width:640px){.action-feedback,.contact-setup-status{font-size:8px}}
+/* Keep content usable even if an animation observer fails to initialize. */
+.reveal{opacity:1;transform:none;transition:none}
+.js-ready .reveal{opacity:0;transform:translateY(10px);transition:opacity .28s ease,transform .28s ease}
+.js-ready .reveal.is-visible{opacity:1;transform:none}
+/* Avoid expensive blur and long motion on everyday devices. */
+.floating-nav{backdrop-filter:none;-webkit-backdrop-filter:none}
+.hero__background{animation:none!important;transform:none!important}
+.nav-mascot,.hero-live-dot,.hero-stamp>span{animation:none!important}
+.project-card,.folder-card,.gallery-tile,.gallery-tile img{transition-duration:.16s!important}
+.contact-form{position:relative;z-index:2;pointer-events:auto}
+.contact-form input,.contact-form textarea,.contact-form button{position:relative;z-index:3;pointer-events:auto}
+.contact-form input,.contact-form textarea{width:100%;min-width:0;user-select:text;-webkit-user-select:text}
+@media(max-width:760px){.js-ready .reveal{transform:none;opacity:1;transition:none}.gallery-tile img{transition:none!important}}
