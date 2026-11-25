@@ -23,11 +23,13 @@
   <script src="js/navigation.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/config.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/stage4.js" defer></script>
   <script src="js/stage5.js" defer></script>
   <script src="js/stage6.js" defer></script>
   <script src="js/hero-video.js" defer></script>
+  <script src="js/guestbook.js" defer></script>
   <script src="js/music.js" defer></script>
 </head>
 <body>
@@ -232,6 +234,25 @@
             <button class="button button-primary" type="submit">Prepare email <span>↗</span></button>
             <p class="form-hint" id="form-status" role="status">Isi email aktif di js/config.js agar pesan dapat diteruskan melalui aplikasi email. Form ini tidak mengirim langsung ke server.</p>
           </form>
+        </div>
+        <div class="guestbook" id="guestbook" aria-labelledby="guestbook-title">
+          <div class="guestbook-copy">
+            <span class="form-label">VISITOR NOTES</span>
+            <h3 id="guestbook-title">Buku Tamu</h3>
+            <p>Tinggalkan pesan atau komentar tentang website ini.</p>
+            <p class="guestbook-review-note">Komentar akan tampil setelah ditinjau.</p>
+          </div>
+          <div class="guestbook-content">
+            <form class="contact-form guestbook-form" id="guestbook-form">
+              <label for="guestbook-name">Nama panggilan</label>
+              <input id="guestbook-name" name="name" type="text" maxlength="32" autocomplete="nickname" placeholder="Nama kamu" required />
+              <label for="guestbook-message">Komentar</label>
+              <textarea id="guestbook-message" name="message" rows="3" maxlength="500" placeholder="Tulis komentarmu..." required></textarea>
+              <button class="button button-primary" type="submit">Kirim komentar <span aria-hidden="true">&#8599;</span></button>
+              <p class="form-hint" id="guestbook-status" role="status" aria-live="polite">Buku tamu belum dihubungkan.</p>
+            </form>
+            <div class="guestbook-list" id="guestbook-list" aria-live="polite"></div>
+          </div>
         </div>
         <footer class="site-footer"><span>© 2026 FIKRI TRI ARDIANSYAH</span><span>DESIGNED & BUILT WITH CURIOSITY ✳</span><a href="#home">BACK TO TOP ↑</a></footer>
       </div>
