@@ -1,0 +1,48 @@
+/* Stage 5 — personal publishing controls, typography, and accessibility polish. */
+:root{--stage5-focus:#8ab4ff;--stage5-glass:rgba(10,24,43,.82)}
+html{scroll-behavior:smooth}
+body{font-family:var(--body)}
+.hero__title,.section-heading-row h2,.about-heading h2,.contact-copy h2,.skills-intro h3,.gallery-note strong{font-family:var(--display)}
+.eyebrow,.section-kicker,.timeline-date,.meta-label,.project-type,.visual-label,.form-label,.site-footer,.dialog-kicker,.gallery-dialog__note{font-family:var(--mono)}
+[hidden]{display:none!important}
+:where(a,button,input,textarea,[tabindex]):focus-visible{outline:2px solid var(--stage5-focus);outline-offset:4px}
+.about-actions{flex-wrap:wrap}
+.button-ghost{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid #9ebce64a;border-radius:999px;color:#dce9fa;background:#ffffff08;font-size:10px;font-weight:700;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
+.button-ghost:hover{transform:translateY(-2px);border-color:#83aef0;background:#ffffff12}
+.contact-email-row{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
+.copy-email-button{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #a9c9f044;border-radius:999px;color:#c5d6ef;background:#ffffff09;font:500 9px var(--mono);cursor:pointer;transition:background .2s,border-color .2s}
+.copy-email-button:hover{border-color:#8fb7f5;background:#ffffff16}
+.copy-email-status{min-height:1.5em;margin:0 0 16px;color:#8fa9c9;font-size:9px;line-height:1.6}
+.dialog-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:23px}
+.dialog-action{display:inline-flex;align-items:center;gap:13px;padding:11px 14px;border:1px solid #83aef05c;border-radius:999px;color:#e4efff;background:#ffffff0b;font-size:10px;font-weight:700;text-decoration:none;transition:background .2s,transform .2s}
+.dialog-action:hover{transform:translateY(-2px);background:#ffffff17}
+.dialog-action span{color:#8db5ff}
+.project-dialog .dialog-note{margin-top:22px}
+.scroll-progress{z-index:50}
+.social-links a[aria-disabled="true"]{pointer-events:none}
+.gallery-tile,.project-card,.folder-card,.button,.button-ghost,.copy-email-button,.dialog-action{ -webkit-tap-highlight-color:transparent }
+@media(max-width:640px){
+  .about-actions{gap:12px}
+  .button-ghost{padding:11px 13px;font-size:9px}
+  .contact-email-row{align-items:flex-start;flex-direction:column;gap:7px}
+  .contact-email{margin-bottom:10px;overflow-wrap:anywhere}
+  .copy-email-button{min-height:38px}
+  .dialog-actions{gap:8px}
+  .dialog-action{font-size:9px;padding:10px 12px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .button-ghost,.copy-email-button,.dialog-action{transition:none}
+}
+
+/* Stage 5.1 — make incomplete actions understandable instead of silently inert. */
+.action-feedback,.contact-setup-status{min-height:1.4em;margin:10px 0 0;color:#90a8c8;font-size:9px;line-height:1.6}
+.project-card--interactive{cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s}
+.project-card--interactive:hover{transform:translateY(-5px);border-color:#8eaee0;box-shadow:0 18px 42px #18375c18}
+.project-card--interactive:focus-visible{outline:3px solid #3475ff;outline-offset:5px}
+.project-detail-trigger{display:grid;flex:0 0 36px;width:36px;height:36px;place-items:center;border:1px solid #dce3ed;border-radius:50%;color:#2864ee;background:white;font-size:18px}
+.dialog-action--unavailable{color:#a7b5c8;border-style:dashed;background:#ffffff06;cursor:default}
+.social-links a.is-unconfigured{opacity:.62;cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px}
+.social-links a.is-unconfigured:hover{opacity:1;color:#fff}
+.social-links a[aria-disabled="true"]{pointer-events:auto}
+@media(max-width:640px){.action-feedback,.contact-setup-status{font-size:8px}}
