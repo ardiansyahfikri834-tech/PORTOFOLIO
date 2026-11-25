@@ -22,8 +22,6 @@ Gunakan checklist ini setelah mengisi konten pribadi.
 
 ## Pemeriksaan akhir
 - [ ] Semua tombol dan navigasi diuji di desktop.
-- [ ] Seluruh kartu proyek dapat dibuka lewat klik dan keyboard.
-- [ ] Tombol CV/Copy Email dan tautan sosial memberi status yang jelas saat belum dikonfigurasi.
 - [ ] Semua tombol dan navigasi diuji di ponsel.
 - [ ] Teks mudah dibaca dan tidak terpotong pada layar kecil.
 - [ ] Tidak ada placeholder, tautan kosong, atau informasi yang belum diverifikasi.
