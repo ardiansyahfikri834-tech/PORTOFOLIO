@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07101c" />
+  <meta name="description" content="Portofolio Fikri Tri Ardiansyah — mahasiswa Teknologi Informasi ITS yang tertarik pada web development, teknologi, dan desain digital." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fikri Tri Ardiansyah — Digital Portfolio" />
+  <meta property="og:description" content="Developer by logic. Creative by curiosity." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <title>Fikri Tri Ardiansyah | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/stage4.css" />
+  <link rel="stylesheet" href="css/stage5.css" />
+  <script src="js/navigation.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/stage4.js" defer></script>
+  <script src="js/stage5.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#home">Lewati navigasi</a>
+  <div class="scroll-progress" role="progressbar" aria-label="Kemajuan membaca halaman" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="scroll-progress-bar"></span></div>
+  <header class="site-header">
+    <nav class="floating-nav" aria-label="Navigasi utama">
+      <div class="nav-mascot" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="presentation">
+          <path class="mascot-shadow" d="M24 3.5c-9.1 0-16.4 7.2-16.4 16.1 0 6.8 3.1 10.6 7 13.7l-1.2 7.1 8.4-4.5c.8.1 1.5.2 2.2.2 9.1 0 16.4-7.2 16.4-16.1S33.1 3.5 24 3.5Z"/>
+          <path class="mascot-body" d="M24 2.5c-9.1 0-16.4 7.2-16.4 16.1 0 6.8 3.1 10.6 7 13.7l-1.2 7.1 8.4-4.5c.8.1 1.5.2 2.2.2 9.1 0 16.4-7.2 16.4-16.1S33.1 2.5 24 2.5Z"/>
+          <ellipse cx="18.7" cy="18.8" rx="2.1" ry="2.8" class="mascot-eye"/><ellipse cx="29.6" cy="18.8" rx="2.1" ry="2.8" class="mascot-eye"/>
+          <path d="M20 26.1c2.2 2 5.7 2 8 0" class="mascot-mouth"/><circle cx="13.1" cy="24" r="2" class="mascot-blush"/><circle cx="34.1" cy="24" r="2" class="mascot-blush"/>
+        </svg>
+      </div>
+      <div class="nav-links">
+        <button class="nav-link is-active" type="button" data-nav="home" aria-current="page">Home</button>
+        <button class="nav-link" type="button" data-nav="about">About</button>
+        <button class="nav-link" type="button" data-nav="portfolio">Portfolio</button>
+        <button class="nav-link" type="button" data-nav="contact">Contact</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Halaman pembuka portofolio">
+      <div class="hero__background" aria-hidden="true"></div><div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow"><span class="hero-live-dot"></span> PERSONAL PORTFOLIO · 2026</p>
+        <h1 class="hero__title"><span>WELCOME TO MY</span><span>PORTFOLIO</span></h1>
+        <p class="hero__subline">FIKRI TRI ARDIANSYAH <span>—</span> DEVELOPER & CREATIVE EXPLORER</p>
+        <a class="hero__scroll" href="#about"><span>SCROLL TO EXPLORE</span><i aria-hidden="true">↓</i></a>
+      </div>
+      <div class="hero-stamp" aria-hidden="true"><span>THINK · BUILD · REPEAT ·</span><strong>FTA</strong></div>
+      <div class="hero__bottom-gradient" aria-hidden="true"></div>
+    </section>
+
+    <section class="section about-section topo-bg" id="about">
+      <div class="section-shell">
+        <div class="section-kicker"><span>01 / GET TO KNOW ME</span><span class="kicker-line"></span></div>
+        <div class="about-grid">
+          <div class="about-heading reveal">
+            <p class="eyebrow">A LITTLE INTRODUCTION</p>
+            <h2>About<br/><span>Me.</span></h2>
+            <p class="about-lead">Building ideas into meaningful digital experiences.</p>
+            <div class="about-actions">
+              <a class="button button-primary" href="#contact">Let's talk <span>↗</span></a>
+              <a class="text-link" href="#portfolio">Explore projects <span>↗</span></a>
+              <a class="button button-ghost" id="cv-download" href="#about" aria-describedby="cv-status">Download CV <span>↓</span></a>
+            </div>
+            <p class="action-feedback" id="cv-status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="portrait-wrap reveal">
+            <div class="portrait-frame">
+              <div class="portrait-placeholder" role="img" aria-label="Tempat foto profil Fikri">
+                <span class="portrait-initials">FTA</span><span class="portrait-caption">YOUR PHOTO GOES HERE</span>
+              </div>
+              <span class="portrait-orbit orbit-one"></span><span class="portrait-orbit orbit-two"></span>
+            </div>
+            <span class="portrait-index">FIG. 01 — THE CREATOR</span>
+          </div>
+          <div class="about-copy reveal">
+            <span class="hello-tag">HELLO, I'M FIKRI <span>✳</span></span>
+            <h3>Developer by logic.<br/>Creative by curiosity.</h3>
+            <p>Saya Fikri Tri Ardiansyah, mahasiswa Teknologi Informasi di Institut Teknologi Sepuluh Nopember (ITS). Saya tertarik pada dunia teknologi, pengembangan website, dan desain digital.</p>
+            <p>Bagi saya, proses membuat sesuatu bukan hanya tentang menulis kode, tetapi juga memahami masalah, merancang pengalaman, lalu mengubah ide menjadi sesuatu yang bisa digunakan.</p>
+            <div class="about-meta">
+              <div><span class="meta-label">BASED IN</span><strong>Surabaya, Indonesia</strong></div>
+              <div><span class="meta-label">FOCUS</span><strong>Web Development · Design</strong></div>
+              <div><span class="meta-label">CURRENTLY</span><strong>Learning & building</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey-section" id="journey">
+      <div class="section-shell">
+        <div class="section-kicker"><span>02 / THE JOURNEY</span><span class="kicker-line"></span></div>
+        <div class="section-heading-row reveal"><div><p class="eyebrow">WHERE I'VE BEEN</p><h2>Education <span>&</span><br/>Experience.</h2></div><p class="heading-note">Every step is a part of the process.<br/>Still learning, still moving forward.</p></div>
+        <div class="journey-grid">
+          <div class="journey-column reveal">
+            <h3 class="column-title"><span class="column-icon">✳</span> EDUCATION</h3>
+            <article class="timeline-item"><span class="timeline-date">2026 — PRESENT</span><h4>Institut Teknologi Sepuluh Nopember</h4><p>Teknologi Informasi</p><span class="timeline-detail">Undergraduate Student · Surabaya</span></article>
+            <article class="timeline-item"><span class="timeline-date">PREVIOUS EDUCATION</span><h4>My Learning Foundation</h4><p>Formal education journey</p><span class="timeline-detail">Details can be completed with your school history</span></article>
+          </div>
+          <div class="journey-column reveal">
+            <h3 class="column-title"><span class="column-icon">↗</span> EXPERIENCE & ACTIVITIES</h3>
+            <article class="timeline-item"><span class="timeline-date">2024 — 2025</span><h4>OSIS — Public Relations Division</h4><p>Communication & Collaboration</p><span class="timeline-detail">Organizational experience</span></article>
+            <article class="timeline-item"><span class="timeline-date">2024</span><h4>DIFEST — MHQ Competition Committee</h4><p>Head of Competition Branch</p><span class="timeline-detail">Committee & event coordination</span></article>
+            <article class="timeline-item"><span class="timeline-date">ONGOING</span><h4>Independent Digital Projects</h4><p>Web Development & Creative Exploration</p><span class="timeline-detail">Learning through hands-on projects</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section summary-section topo-bg" id="summary">
+      <div class="section-shell">
+        <div class="section-kicker"><span>03 / WHAT I DO</span><span class="kicker-line"></span></div>
+        <div class="section-heading-row reveal"><div><p class="eyebrow">A QUICK OVERVIEW</p><h2>Portfolio<br/><span>Summary.</span></h2></div><p class="heading-note">A collection of things I've built,<br/>learned, and been part of.</p></div>
+        <div class="folder-grid">
+          <a class="folder-card reveal" href="#portfolio" data-filter-link="projects"><div class="folder-tab">01 / BUILD</div><div class="folder-art art-project"><span> &lt;/&gt; </span><i>✳</i></div><div class="folder-bottom"><div><h3>Projects</h3><p>Websites & digital experiments</p></div><span class="folder-arrow">↗</span></div></a>
+          <a class="folder-card reveal" href="#portfolio" data-filter-link="certificates"><div class="folder-tab">02 / LEARN</div><div class="folder-art art-certificate"><span>✧</span><i>✳</i></div><div class="folder-bottom"><div><h3>Certificates</h3><p>Courses & learning milestones</p></div><span class="folder-arrow">↗</span></div></a>
+          <a class="folder-card reveal" href="#portfolio" data-filter-link="awards"><div class="folder-tab">03 / ACHIEVE</div><div class="folder-art art-award"><span>★</span><i>✳</i></div><div class="folder-bottom"><div><h3>Awards</h3><p>Recognition & achievements</p></div><span class="folder-arrow">↗</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-shell">
+        <div class="section-kicker"><span>04 / MY TOOLKIT</span><span class="kicker-line"></span></div>
+        <div class="section-heading-row reveal"><div><p class="eyebrow">TOOLS & INTERESTS</p><h2>Things I <span>Explore.</span></h2></div><p class="heading-note">A growing toolkit built through<br/>classes, experiments, and practice.</p></div>
+        <div class="skills-layout">
+          <div class="skills-intro reveal"><span class="skills-symbol">✳</span><h3>Curiosity<br/>is my <span>engine.</span></h3><p>Saya senang mempelajari bagaimana teknologi bekerja, mencoba pendekatan baru, dan mengembangkan kemampuan melalui proyek nyata.</p></div>
+          <div class="skill-groups">
+            <article class="skill-group reveal"><span class="skill-number">01</span><div><h3>Development</h3><p>HTML <i>·</i> CSS <i>·</i> JavaScript <i>·</i> C</p></div><span class="skill-mark">⌘</span></article>
+            <article class="skill-group reveal"><span class="skill-number">02</span><div><h3>Creative</h3><p>UI Design <i>·</i> Visual Design <i>·</i> Creative Direction</p></div><span class="skill-mark">✳</span></article>
+            <article class="skill-group reveal"><span class="skill-number">03</span><div><h3>Currently exploring</h3><p>React <i>·</i> Tailwind CSS <i>·</i> Firebase</p></div><span class="skill-mark">↗</span></article>
+          </div>
+        </div>
+        <p class="skills-disclaimer">Daftar ini menggambarkan area belajar dan eksplorasi, bukan klaim tingkat kemahiran profesional.</p>
+      </div>
+    </section>
+
+    <section class="section portfolio-section" id="portfolio">
+      <div class="section-shell">
+        <div class="section-kicker"><span>05 / SELECTED WORKS</span><span class="kicker-line"></span></div>
+        <div class="section-heading-row reveal"><div><p class="eyebrow">MADE WITH CURIOSITY</p><h2>My <span>Portfolio.</span></h2></div><p class="heading-note">A few things from my digital<br/>playground and learning journey.</p></div>
+        <div class="portfolio-tabs" role="tablist" aria-label="Kategori portofolio">
+          <button class="portfolio-tab is-selected" id="tab-projects" type="button" role="tab" aria-controls="portfolio-items" aria-selected="true" data-filter="projects">Projects <span>02</span></button>
+          <button class="portfolio-tab" id="tab-certificates" type="button" role="tab" aria-controls="portfolio-items" aria-selected="false" data-filter="certificates">Certificates <span>—</span></button>
+          <button class="portfolio-tab" id="tab-awards" type="button" role="tab" aria-controls="portfolio-items" aria-selected="false" data-filter="awards">Awards <span>—</span></button>
+        </div>
+        <div class="project-grid" id="portfolio-items" role="tabpanel" aria-live="polite" tabindex="0" aria-labelledby="tab-projects">
+          <article class="project-card reveal project-card--interactive" data-category="projects" data-project-key="attendance" tabindex="0" role="button" aria-label="Lihat detail Presensi Mahasiswa"><div class="project-visual visual-attendance"><span class="visual-label">WEB APP / 01</span><div class="mock-window"><div class="mock-dots">● ● ●</div><div class="mock-title">PRESENSI<span>_ITS</span></div><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-pill">STUDENT DASHBOARD</div></div></div><div class="project-info"><div><span class="project-type">WEB DEVELOPMENT</span><h3>Presensi Mahasiswa</h3><p>Website presensi mahasiswa dengan tampilan dashboard dan integrasi spreadsheet.</p></div><span class="project-detail-trigger" aria-hidden="true">↗</span></div></article>
+          <article class="project-card reveal project-card--interactive" data-category="projects" data-project-key="album" tabindex="0" role="button" aria-label="Lihat detail VANDSTAVOR Album"><div class="project-visual visual-album"><span class="visual-label">WEB EXPERIENCE / 02</span><div class="album-stack"><span>V</span><span>A</span><span>N</span><span>D</span></div><div class="album-word">VANDSTAVOR<br/><small>MEMORIES IN FRAME</small></div></div><div class="project-info"><div><span class="project-type">CREATIVE DEVELOPMENT</span><h3>VANDSTAVOR Album</h3><p>Eksplorasi website album digital dengan pendekatan visual dan storytelling.</p></div><span class="project-detail-trigger" aria-hidden="true">↗</span></div></article>
+          <article class="project-card reveal" data-category="certificates" hidden><div class="empty-category"><span>✧</span><h3>Certificates</h3><p>Tambahkan sertifikat yang ingin kamu tampilkan di sini.</p></div></article>
+          <article class="project-card reveal" data-category="awards" hidden><div class="empty-category"><span>★</span><h3>Awards & Recognition</h3><p>Tambahkan penghargaan dan pencapaianmu di sini.</p></div></article>
+        </div>
+        <p class="portfolio-footnote">Pilih ikon panah pada kartu untuk melihat ringkasan. Tautan demo dan repository dapat ditambahkan setelah URL final tersedia.</p>
+      </div>
+    </section>
+
+    <section class="section gallery-section topo-bg" id="gallery">
+      <div class="section-shell">
+        <div class="section-kicker"><span>06 / BEHIND THE SCENES</span><span class="kicker-line"></span></div>
+        <div class="section-heading-row reveal"><div><p class="eyebrow">LIFE IN FRAMES</p><h2>Photo <span>Gallery.</span></h2></div><p class="heading-note">Little moments, meaningful memories.<br/>A visual diary beyond the screen.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-note reveal"><span>COLLECTED MOMENTS</span><strong>Life is more<br/>than pixels<span>.</span></strong><small>VISUAL DIARY / ILLUSTRATION EDITION</small></div>
+          <button class="gallery-tile tile-one reveal" type="button" data-gallery-open="campus" aria-label="Perbesar ilustrasi Campus Notes">
+            <img src="assets/images/gallery-campus.svg" alt="Ilustrasi abstrak gedung kampus dan langit senja" loading="lazy" />
+            <span>01 / CAMPUS</span><b>Campus notes <i>↗</i></b>
+          </button>
+          <button class="gallery-tile tile-two reveal" type="button" data-gallery-open="code" aria-label="Perbesar ilustrasi Behind the Code">
+            <img src="assets/images/gallery-code.svg" alt="Ilustrasi abstrak jendela kode dan elemen antarmuka" loading="lazy" />
+            <span>02 / PROCESS</span><b>Behind the code <i>↗</i></b>
+          </button>
+          <button class="gallery-tile tile-three reveal" type="button" data-gallery-open="ideas" aria-label="Perbesar ilustrasi Creative Notes">
+            <img src="assets/images/gallery-ideas.svg" alt="Ilustrasi abstrak catatan ide, bentuk geometris, dan alat tulis" loading="lazy" />
+            <span>03 / IDEAS</span><b>Creative notes <i>↗</i></b>
+          </button>
+          <button class="gallery-tile tile-four reveal" type="button" data-gallery-open="surabaya" aria-label="Perbesar ilustrasi City Lights">
+            <img src="assets/images/gallery-city.svg" alt="Ilustrasi abstrak siluet kota saat malam" loading="lazy" />
+            <span>04 / CITY</span><b>City lights <i>↗</i></b>
+          </button>
+        </div>
+        <p class="gallery-caption">Ilustrasi orisinal sementara — ganti dengan foto kegiatan dan momen pribadimu sebelum dipublikasikan.</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-shell">
+        <div class="section-kicker"><span>07 / SAY HELLO</span><span class="kicker-line"></span></div>
+        <div class="contact-grid">
+          <div class="contact-copy reveal"><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let's make<br/>something <span>great.</span></h2><p>Terbuka untuk berdiskusi, berkolaborasi, atau sekadar bertukar ide seputar teknologi dan hal kreatif.</p><div class="contact-email-row"><a class="contact-email" href="#contact" id="contact-email">Email belum diatur <span>↗</span></a><button class="copy-email-button" id="copy-email" type="button" hidden>Copy email <span>⧉</span></button></div><p class="copy-email-status" id="copy-email-status" role="status" aria-live="polite"></p><div class="social-links"><a href="#contact" data-social="github">GITHUB <span>↗</span></a><a href="#contact" data-social="linkedin">LINKEDIN <span>↗</span></a><a href="#contact" data-social="instagram">INSTAGRAM <span>↗</span></a></div><p class="contact-setup-status" id="social-link-status" role="status" aria-live="polite"></p></div>
+          <form class="contact-form reveal" id="contact-form">
+            <span class="form-label">DROP A MESSAGE</span>
+            <label for="visitor-name">Your name</label><input id="visitor-name" name="name" type="text" placeholder="Nama kamu" required/>
+            <label for="visitor-email">Email address</label><input id="visitor-email" name="email" type="email" placeholder="email@contoh.com" required/>
+            <label for="visitor-message">Your message</label><textarea id="visitor-message" name="message" rows="4" placeholder="Ceritakan sesuatu..." required></textarea>
+            <button class="button button-primary" type="submit">Prepare email <span>↗</span></button>
+            <p class="form-hint" id="form-status" role="status">Formulir menyiapkan pesan melalui aplikasi email. Isi alamat email aktif di js/config.js agar tombol ini dapat digunakan.</p>
+          </form>
+        </div>
+        <footer class="site-footer"><span>© 2026 FIKRI TRI ARDIANSYAH</span><span>DESIGNED & BUILT WITH CURIOSITY ✳</span><a href="#home">BACK TO TOP ↑</a></footer>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Tutup detail">×</button></form>
+    <span class="dialog-kicker" id="dialog-kicker">PROJECT DETAILS / 01</span>
+    <h2 id="dialog-title">Project title</h2>
+    <p id="dialog-description"></p>
+    <div class="dialog-meta"><span>ROLE</span><strong id="dialog-role"></strong></div>
+    <div class="dialog-meta"><span>FOCUS</span><strong id="dialog-focus"></strong></div>
+    <div class="dialog-actions"><a class="dialog-action" id="dialog-demo" href="#" target="_blank" rel="noopener noreferrer" hidden>Live demo <span>↗</span></a><span class="dialog-action dialog-action--unavailable" id="dialog-demo-unavailable">Demo link belum ditambahkan</span><a class="dialog-action" id="dialog-repository" href="#" target="_blank" rel="noopener noreferrer" hidden>Source code <span>↗</span></a><span class="dialog-action dialog-action--unavailable" id="dialog-repository-unavailable">Repository belum ditambahkan</span></div>
+    <p class="dialog-note">Tautan proyek akan muncul setelah URL demo atau repository ditambahkan di js/config.js.</p>
+  </dialog>
+
+  <dialog class="gallery-dialog" id="gallery-dialog" aria-labelledby="gallery-dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Tutup galeri">×</button></form>
+    <div class="gallery-dialog__image"><img id="gallery-dialog-image" src="assets/images/gallery-campus.svg" alt="" /></div>
+    <div class="gallery-dialog__copy"><span class="dialog-kicker" id="gallery-dialog-kicker">VISUAL DIARY / 01</span><h2 id="gallery-dialog-title">Campus notes</h2><p id="gallery-dialog-description"></p><span class="gallery-dialog__note">Ilustrasi placeholder — siap diganti dengan foto milikmu.</span></div>
+  </dialog>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Kembali ke atas">↑</button>
+</body>
+</html>
