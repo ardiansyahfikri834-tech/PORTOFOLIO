@@ -58,8 +58,8 @@ html{scroll-padding-top:112px}
 .gallery-tile>b i{color:#d5e4fb;font-size:17px;font-style:normal;transition:transform .25s}
 .gallery-tile:hover>b i{transform:translate(3px,-3px)}
 .gallery-caption{margin:17px 0 0;color:#7186a1;font-size:9px;line-height:1.7}
-.gallery-dialog{position:fixed;inset:50% auto auto 50%;display:grid;width:min(900px,calc(100% - 32px));max-width:none;max-height:min(88vh,800px);grid-template-columns:1.1fr .9fr;gap:0;padding:0;overflow:auto;border:1px solid #ffffff2c;border-radius:15px;color:#f7f9ff;background:#0b192c;box-shadow:0 30px 100px #000b;transform:translate(-50%,-47%);opacity:0;transition:opacity .2s,transform .2s}
-.gallery-dialog[open]{opacity:1;transform:translate(-50%,-50%)}
+.gallery-dialog{display:none;position:fixed;inset:50% auto auto 50%;display:grid;width:min(900px,calc(100% - 32px));max-width:none;max-height:min(88vh,800px);grid-template-columns:1.1fr .9fr;gap:0;padding:0;overflow:auto;border:1px solid #ffffff2c;border-radius:15px;color:#f7f9ff;background:#0b192c;box-shadow:0 30px 100px #000b;transform:translate(-50%,-47%);opacity:0;transition:opacity .2s,transform .2s}
+.gallery-dialog[open]{display:grid;opacity:1;transform:translate(-50%,-50%)}
 .gallery-dialog::backdrop{background:#020711c7;backdrop-filter:blur(8px)}
 .gallery-dialog>form{position:absolute;z-index:3;top:13px;right:13px}
 .gallery-dialog__image{min-height:420px;background:#12243a}
@@ -85,3 +85,11 @@ html{scroll-padding-top:112px}
 @media(max-width:640px){.hero__subline{max-width:280px;margin:18px auto 0;font-size:7px;line-height:1.8;letter-spacing:.13em}.hero-stamp{right:20px;bottom:25px;width:68px;height:68px}.hero-stamp strong{font-size:19px}.hero-stamp>span{font-size:5px}.hero__scroll{margin-top:38px}.gallery-grid{grid-template-rows:175px 150px 150px;gap:11px}.gallery-tile{padding:0}.gallery-tile>span{top:11px;left:11px;font-size:7px}.gallery-tile>b{right:10px;bottom:11px;left:11px;font-size:13px}.gallery-caption{font-size:8px}.gallery-dialog{width:calc(100% - 22px);max-height:88vh}.gallery-dialog__image,.gallery-dialog__image img{min-height:210px;max-height:35vh}.gallery-dialog__copy{padding:25px 22px 28px}.gallery-dialog__copy h2{font-size:30px}.gallery-dialog__copy p{font-size:11px}}
 @media(max-width:380px){.hero-stamp{right:13px;bottom:19px;width:58px;height:58px}.gallery-grid{grid-template-rows:160px 138px 138px}.gallery-tile>b{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.hero-live-dot,.hero-stamp>span{animation:none!important}.gallery-tile,.gallery-tile img{transition:none!important}}
+
+/* Reliability + performance patch: closed dialogs must never cover the page. */
+.project-dialog:not([open]),.gallery-dialog:not([open]){display:none!important;pointer-events:none!important}
+.project-dialog[open]{display:block}
+.gallery-dialog[open]{display:grid}
+@media(hover:none),(pointer:coarse){.gallery-tile:hover{transform:none;box-shadow:none}.gallery-tile:hover img{transform:none;filter:none}}
+@media(max-width:760px){.floating-nav,.hero__eyebrow,.hero-stamp,.back-to-top{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}.gallery-dialog::backdrop,.project-dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-reduced-motion:reduce){.gallery-tile,.gallery-tile img,.project-card,.folder-card,.button,.back-to-top{transition:none!important;transform:none!important}}
